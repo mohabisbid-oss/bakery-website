@@ -1,0 +1,105 @@
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Open Sans",sans-serif;color:#555;line-height:1.7;background:#fff}
+img{width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1150px;margin:auto}
+.section{padding:100px 0}
+.light{background:#f8f8f8}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.photo{overflow:hidden}
+.photo img{transition:.5s}
+.photo:hover img{transform:scale(1.04)}
+.text>span,.heading>span{display:block;color:#a98b6b;font-family:"Alegreya",serif;font-size:19px;margin-bottom:10px}
+h1,h2,h3{font-family:"Alegreya",serif;font-weight:500;color:#303030}
+h1{font-size:78px;line-height:1.1}
+h2{font-size:40px;line-height:1.25;margin-bottom:24px}
+h3{font-size:25px;margin:18px 0 10px}
+p{font-size:15px;color:#777;margin-bottom:16px}
+
+/* Navbar */
+.navbar{position:absolute;top:0;left:0;width:100%;z-index:5;padding:25px 0;color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{font:600 32px "Alegreya",serif;color:#fff}
+nav{display:flex;gap:34px}
+nav a{font-size:14px;color:#fff;transition:.3s}
+nav a:hover{color:#d6b78b}
+
+/* Hero */
+.hero{height:100vh;min-height:650px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:url("https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=2000&q=90") center/cover no-repeat}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.hero-content{position:relative;z-index:1;width:90%;max-width:850px}
+.welcome{font:26px "Alegreya",serif;color:#fff}
+.hero h1{color:#fff;margin-bottom:20px}
+.hero-content>p:not(.welcome){color:#fff;font-size:20px;max-width:760px;margin:0 auto}
+.buttons{display:flex;justify-content:center;gap:12px;margin-top:35px}
+.btn{display:inline-block;padding:13px 27px;border-radius:4px;font-weight:600;transition:.3s}
+.brown{background:#a98b6b;color:#fff}
+.brown:hover{background:#80674d}
+.white{background:#fff;color:#333}
+.white:hover{background:#eee}
+.inline{margin-top:15px}
+.scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);width:38px;height:55px;border:2px solid #fff;border-radius:22px;color:#fff;font-size:28px;line-height:40px}
+
+/* About */
+.checks{list-style:none;margin-top:24px}
+.checks li{margin:12px 0;padding-left:28px;position:relative}
+.checks li:before{content:"✓";position:absolute;left:0;color:#a98b6b;font-weight:bold}
+
+/* Products */
+.heading{text-align:center;max-width:700px;margin:0 auto 55px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:35px}
+.cards article{text-align:center}
+.cards img{height:280px;object-fit:cover}
+.cards p{max-width:330px;margin:auto}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery img{height:270px;object-fit:cover;transition:.4s}
+.gallery img:hover{transform:scale(1.03);filter:brightness(.85)}
+
+/* Blog */
+.blog{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.blog article{border:1px solid #eee;background:#fff}
+.blog article>img{height:220px;object-fit:cover}
+.blog article>div{padding:24px}
+.blog small{color:#aaa}
+.blog h3{margin:7px 0}
+.blog a{color:#a98b6b}
+
+/* Contact */
+.contact-list{margin-top:30px}
+.contact-list p{margin:18px 0}
+.map{height:420px}
+.map iframe{width:100%;height:100%;border:0}
+
+/* Footer */
+footer{background:#403d38;color:#aaa}
+.footer{display:grid;grid-template-columns:repeat(4,1fr);gap:45px;padding:70px 0}
+.footer h3{color:#fff;margin-bottom:20px}
+.footer p{color:#aaa;font-size:14px}
+.bottom{background:#35322e;text-align:center;padding:22px}
+.bottom p{margin:0;color:#aaa}
+
+/* Responsive */
+@media(max-width:900px){
+  nav{display:none}
+  .two{grid-template-columns:1fr;gap:45px}
+  .cards,.blog{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .footer{grid-template-columns:repeat(2,1fr)}
+  h1{font-size:58px}
+}
+@media(max-width:600px){
+  .section{padding:70px 0}
+  .container{width:92%}
+  .logo{font-size:27px}
+  .hero{min-height:600px}
+  h1{font-size:43px}
+  h2{font-size:32px}
+  .hero-content>p:not(.welcome){font-size:16px}
+  .buttons{flex-direction:column;width:180px;margin:30px auto 0}
+  .gallery{grid-template-columns:1fr}
+  .gallery img{height:300px}
+  .footer{grid-template-columns:1fr}
+}
